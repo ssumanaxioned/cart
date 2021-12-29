@@ -6,7 +6,6 @@ const initialState = {
 
 
 const apiReducer =(state = initialState, action)=> {
-  console.log('action.type',action);
   switch(action.type) {
     case 'FETCH_API_RECIEVED': 
     return {

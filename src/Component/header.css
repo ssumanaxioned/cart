@@ -5,6 +5,9 @@ nav {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  position: sticky;
+  top: 0;
+  background-color: whitesmoke;
 }
 
 ul {
@@ -13,6 +16,8 @@ ul {
   align-items: center;
   justify-content: center;
 }
+
+ul:first-of-type li:first-of-type { margin-left: 1em; }
 
 li { margin-right: 1em; }
 

@@ -3,7 +3,6 @@ const initialState = {
 }
 
 const selectedReducer =(state = initialState, action)=> {
-  console.log('add', action);
   switch(action.type) {
     case 'ADD_TO_CART': 
     return {

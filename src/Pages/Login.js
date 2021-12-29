@@ -2,8 +2,9 @@ import React, { useState } from 'react'
 import { useDispatch } from 'react-redux';
 import { useHistory, useLocation } from 'react-router'
 import { login } from '../Actions';
+import './login.css'
 
-function Login() {
+function Login(props) {
   const [user, setUser] = useState('')
   const [password, setPassword] = useState('')
   const history = useHistory();
@@ -30,10 +31,10 @@ function Login() {
 
   return (
     <form onSubmit={handleOnSubmit}>
-      <label htmlFor="user">
+      <label htmlFor="user">Username   
         <input id='user' name='user' type="text" onChange={handleUsername} />
       </label>
-      <label htmlFor="password">
+      <label htmlFor="password">Password
         <input id='password' name='password' type="password" onChange={handlePassword} />
       </label>
       <button type="submit">Log In</button>

@@ -7,7 +7,7 @@ import { useSelector } from 'react-redux';
 
 function Header() {
   const {products} = useSelector(state => state.selectedReducer)
-  console.log(products.length);
+  
   return (
     <nav>
       <ul>

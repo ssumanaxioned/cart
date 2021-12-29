@@ -3,8 +3,11 @@ import { Link } from 'react-router-dom'
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import './header.css';
 import LoginButton from './LoginButton';
+import { useSelector } from 'react-redux';
 
 function Header() {
+  const {products} = useSelector(state => state.selectedReducer)
+  console.log(products.length);
   return (
     <nav>
       <ul>
@@ -16,8 +19,11 @@ function Header() {
         </li>
       </ul>
       <ul>
-        <li>
-          <Link to='/cartitem'><ShoppingCartIcon /></Link>
+        <li className='cart'>
+          <Link to='/cartitem'>
+            <ShoppingCartIcon style={{fontSize: 36}} />
+            <p className='number'>{products.length}</p>
+          </Link>
         </li>
         <li>
           <LoginButton />

@@ -7,4 +7,25 @@ nav {
   align-items: center;
 }
 
+ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
 li { margin-right: 1em; }
+
+.cart {
+  position: relative;
+}
+
+.number {
+  padding: 2px 5px;
+  border-radius: 50%;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background-color: red;
+  color: white;
+}
